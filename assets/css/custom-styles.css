@@ -1,0 +1,62 @@
+/* Custom stylesheet, add your own styles here */
+.timeline {
+    width: 600px;
+    margin: 0 auto;
+    position: relative;
+    padding: 20px 0;
+  }
+
+  .timeline::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: #ddd;
+    transform: translateX(-50%);
+  }
+
+  .timeline-event {
+    width: 50%;
+    padding: 20px;
+    position: relative;
+    box-sizing: border-box;
+  }
+
+  .timeline-event:nth-child(odd) {
+    left: 0;
+    text-align: right;
+  }
+
+  .timeline-event:nth-child(even) {
+    left: 50%;
+    text-align: left;
+  }
+
+  .timeline-event::before {
+    content: '';
+    position: absolute;
+    top: 25px;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: #fff;
+    border: 2px solid #007bff;
+    z-index: 2;
+  }
+
+  .timeline-event:nth-child(odd)::before {
+    right: -6px;
+  }
+
+  .timeline-event:nth-child(even)::before {
+    left: -6px;
+  }
+
+  .timeline-event-content {
+    background: #f9f9f9;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  }
